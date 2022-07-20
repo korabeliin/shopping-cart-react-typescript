@@ -1,0 +1,45 @@
+.navbarContainer {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  background: white;
+  box-shadow: 0 3px 5px lightgray;
+  height: 5rem;
+  & .navbarContainer_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 80%;
+    height: 100%;
+    & h1 {
+      font-size: 2rem;
+      margin: 0;
+      cursor: pointer;
+    }
+    & .navbarCart_button {
+      position: relative;
+      & .navQuantity {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 1.8rem;
+        width: 1.8rem;
+        border-radius: 50%;
+        background: #ff4d4f;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: translate(20%, 20%);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .navbarContainer {
+    & .navbarContainer_content {
+      width: 80%;
+    }
+  }
+}

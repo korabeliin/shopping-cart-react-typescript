@@ -1,0 +1,16 @@
+.storeContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  max-width: 85%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+@media only screen and (max-width: 992px) {
+  .storeContainer {
+    justify-content: center;
+    width: 80%;
+  }
+}

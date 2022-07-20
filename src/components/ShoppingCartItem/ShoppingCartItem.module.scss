@@ -1,0 +1,114 @@
+.cartItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  & .cartItem_info {
+    display: flex;
+    & .cartItem_info_text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & .multiple {
+        align-self: center;
+        font-size: .85rem;
+        opacity: .5;
+      }
+      & div {
+        display: flex;
+        flex-direction: column;
+        margin-right: 5px;
+        & .itemName {
+          font-size: 1rem;
+          font-weight: 500;
+          align-self: flex-start;
+        }
+        & .itemPrice {
+          font-size: .85rem;
+          opacity: .5;
+          align-self: flex-start;
+        }
+      }
+    }
+    & img {
+      height: 6rem;
+      width: 9rem;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+  }
+  & .priceAndRemove {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & span {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+    & button {
+      height: 2.5rem;
+      width: 2.5rem;
+      margin: 0 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 1240px) {
+  .cartItem {
+    & .priceAndRemove {
+      & span {
+        font-size: .85rem;
+      }
+      & button {
+        height: 2rem;
+        width: 2rem;
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .cartItem {
+    & .cartItem_info {
+      img {
+        height: 9rem;
+        width: 12rem;
+      }
+    }
+    & .priceAndRemove {
+      & span {
+        font-size: 1rem;
+      }
+      & button {
+        height: 2.5rem;
+        width: 2.5rem;
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .cartItem {
+    & .cartItem_info {
+      img {
+        width: 10rem;
+      }
+    }
+    & .priceAndRemove {
+      & .cartPrice {
+        display: none;
+      }
+      & button {
+        height: 1.7rem;
+        width: 1.7rem;
+        margin: 0;
+      }
+    }
+  }
+}
